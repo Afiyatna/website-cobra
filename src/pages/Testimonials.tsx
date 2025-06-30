@@ -400,3 +400,5 @@
 // };
 
 // export default Testimonials;
+
+export default () => null;

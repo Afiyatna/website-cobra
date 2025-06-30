@@ -386,3 +386,5 @@
 // };
 
 // export default Partnerships;
+
+export default () => null;

@@ -444,3 +444,5 @@
 // };
 
 // export default CertificateValidation;
+
+export default () => null;
