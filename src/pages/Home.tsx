@@ -22,7 +22,7 @@ const Home = () => {
 
   useEffect(() => {
     // Set countdown to Ramadan 17 (example date)
-    const targetDate = new Date('2024-04-25T19:00:00').getTime();
+    const targetDate = new Date('2025-07-20T06:00:00').getTime();
 
     const timer = setInterval(() => {
       const now = new Date().getTime();
@@ -42,7 +42,7 @@ const Home = () => {
   }, []);
 
   const stats = [
-    { icon: Users, label: 'Anggota Aktif', value: '150+' },
+    // { icon: Users, label: 'Anggota Aktif', value: '150+' },
     { icon: Heart, label: 'Program Sosial', value: '25+' },
     { icon: Calendar, label: 'Kegiatan/Tahun', value: '50+' },
     { icon: Star, label: 'Tahun Berpengalaman', value: '8' },
@@ -50,11 +50,11 @@ const Home = () => {
 
   const upcomingEvents = [
     {
-      title: 'Pengajian Akbar 17 Ramadhan',
-      date: '25 April 2024',
-      time: '19:00 WIB',
-      location: 'Masjid Agung Brangsong',
-      image: 'https://images.pexels.com/photos/2774556/pexels-photo-2774556.jpeg?auto=compress&cs=tinysrgb&w=400'
+      title: 'Anjangsana Muda Mudi Brangsong',
+      date: 'Minggu, 20 Juli 2025',
+      time: '06:00 - 23:00 WIB',
+      location: 'Jogja - Kelompok Asy-Syifa',
+      image: '/img-event1.jpg'
     },
     {
       title: 'Bakti Sosial Ramadhan',
@@ -139,7 +139,7 @@ const Home = () => {
       <section className="py-16 bg-gradient-to-r from-primary-50 to-secondary-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-primary-900 mb-4">Acara Mendatang</h2>
-          <h3 className="text-xl text-primary-700 mb-8">Pengajian Akbar 17 Ramadhan</h3>
+          <h3 className="text-xl text-primary-700 mb-8">Anjangsana Muda Mudi Brangsong</h3>
           
           <div className="grid grid-cols-4 gap-4 mb-8">
             {Object.entries(timeLeft).map(([unit, value]) => (
@@ -152,11 +152,11 @@ const Home = () => {
           
           <div className="flex items-center justify-center space-x-4 text-primary-700">
             <Calendar className="w-5 h-5" />
-            <span>25 April 2024</span>
+            <span>Minggu, 20 Juli 2025</span>
             <Clock className="w-5 h-5" />
-            <span>19:00 WIB</span>
+            <span>06:00 - 23:00 WIB</span>
             <MapPin className="w-5 h-5" />
-            <span>Masjid Agung Brangsong</span>
+            <span>Jogja - Kelompok Asy-Syifa'</span>
           </div>
         </div>
       </section>
