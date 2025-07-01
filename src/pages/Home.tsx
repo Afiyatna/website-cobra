@@ -50,10 +50,10 @@ const Home = () => {
 
   const upcomingEvents = [
     {
-      title: 'Anjangsana Muda Mudi Brangsong',
-      date: 'Minggu, 20 Juli 2025',
+      title: 'Rekreasi Muda Mudi Brangsong',
+      date: 'Minggu, 6 Maret 2022',
       time: '06:00 - 23:00 WIB',
-      location: 'Jogja - Kelompok Asy-Syifa',
+      location: 'Jogja (Pantai Drini, Malioboro',
       image: '/img-event1.jpg'
     },
     {
@@ -74,7 +74,8 @@ const Home = () => {
           <img
             src={imgHome}
             alt="Home Visual"
-            className="w-full h-full object-cover mix-blend-overlay"
+            className="w-full h-[40vh] sm:h-[60vh] md:h-[80vh] object-cover object-center rounded-b-3xl shadow-lg transition-all duration-500"
+            style={{ aspectRatio: '16/9' }}
           />
         </div>
         
@@ -178,7 +179,8 @@ const Home = () => {
                   <img
                     src={event.image}
                     alt={event.title}
-                    className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                    className="w-full h-48 sm:h-56 md:h-64 object-cover object-center rounded-t-xl group-hover:scale-105 transition-transform duration-300 shadow-md"
+                    style={{ aspectRatio: '16/9' }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                   <div className="absolute top-4 right-4">
