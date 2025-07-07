@@ -68,13 +68,13 @@ const Home = () => {
   return (
     <div className="animate-fade-in">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
         <div className="absolute inset-0 bg-gradient-to-r from-primary-900 via-primary-800 to-primary-700">
           <div className="absolute inset-0 bg-black/30"></div>
           <img
             src={imgHome}
             alt="Home Visual"
-            className="w-full h-[40vh] sm:h-[60vh] md:h-[80vh] object-cover object-center rounded-b-3xl shadow-lg transition-all duration-500"
+            className="w-full h-[40vh] sm:h-[60vh] md:h-[80vh] object-cover object-center rounded-b-3xl shadow-lg transition-all duration-500 mt-20"
             style={{ aspectRatio: '16/9' }}
           />
         </div>
@@ -112,11 +112,11 @@ const Home = () => {
         </div>
 
         {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        {/* <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
           <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
             <div className="w-1 h-3 bg-white/50 rounded-full mt-2 animate-pulse"></div>
           </div>
-        </div>
+        </div> */}
       </section>
 
       {/* Stats Section */}
