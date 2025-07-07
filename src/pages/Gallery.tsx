@@ -32,7 +32,7 @@ const Gallery = () => {
     {
       id: 1,
       type: 'image',
-      images: ['/img-event1.jpg'],
+      images: ['Gallery/img-event1.jpg'],
       title: 'Rekreasi Muda Mudi Brangsong',
       category: 'Anjangsana',
       date: 'Minggu, 6 Maret 2022',
@@ -43,7 +43,7 @@ const Gallery = () => {
     {
       id: 2,
       type: 'image',
-      images: ['/img-event2.jpg', '/img-event2-1.jpg','/img-event2-2.jpg','/img-event2-3.jpg','img-event2-4.jpg'],
+      images: ['Gallery/img-event2.jpg', 'Gallery/img-event2-1.jpg','Gallery/img-event2-2.jpg','Gallery/img-event2-3.jpg','Gallery/img-event2-4.jpg'],
       title: 'Badminton Championship',
       category: 'sports',
       date: '19 November 2023',
