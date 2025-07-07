@@ -54,14 +54,14 @@ const Home = () => {
       date: 'Minggu, 6 Maret 2022',
       time: '06:00 - 23:00 WIB',
       location: 'Jogja (Pantai Drini, Malioboro)',
-      image: '/img-event1.jpg'
+      image: 'Gallery/img-event1.jpg'
     },
     {
       title: 'Badminton Championship',
       date: '19 November 2023',
       time: '14:00 - 17:00 WIB',
       location: 'Gor Fandamel Kaliwungu',
-      image: '/img-event2.jpg'
+      image: 'Gallery/img-event2.jpg'
     }
   ];
 
