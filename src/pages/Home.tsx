@@ -22,7 +22,7 @@ const Home = () => {
 
   useEffect(() => {
     // Set countdown to Ramadan 17 (example date)
-    const targetDate = new Date('2025-07-20T06:00:00').getTime();
+    const targetDate = new Date('2025-08-24T06:00:00').getTime();
 
     const timer = setInterval(() => {
       const now = new Date().getTime();
@@ -120,7 +120,7 @@ const Home = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-white">
+      {/* <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
@@ -134,7 +134,7 @@ const Home = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Countdown Section */}
       <section className="py-16 bg-gradient-to-r from-primary-50 to-secondary-50">
@@ -153,9 +153,9 @@ const Home = () => {
           
           <div className="flex items-center justify-center space-x-4 text-primary-700">
             <Calendar className="w-5 h-5" />
-            <span>Minggu, 20 Juli 2025</span>
+            <span>Minggu, 24 Agustus 2025</span>
             <Clock className="w-5 h-5" />
-            <span>06:00 - 23:00 WIB</span>
+            <span>06:00 - 24:00 WIB</span>
             <MapPin className="w-5 h-5" />
             <span>Jogja - Kelompok Asy-Syifa'</span>
           </div>
