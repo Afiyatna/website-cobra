@@ -1,9 +1,23 @@
 import React, { useState } from 'react';
-import { Play, Calendar, MapPin, Users, X } from 'lucide-react';
+import { Play, Calendar, MapPin, Users, X, Images } from 'lucide-react';
+
+type MediaItem = {
+  id: number;
+  type: string;
+  images?: string[];
+  url?: string;
+  title: string;
+  category: string;
+  date: string;
+  time?: string;
+  location: string;
+  participants: string;
+};
 
 const Gallery = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedMedia, setSelectedMedia] = useState(null);
+  const [selectedMedia, setSelectedMedia] = useState<MediaItem | null>(null);
+  const [activeImageIdx, setActiveImageIdx] = useState(0);
 
   const categories = [
     { id: 'all', name: 'Semua' },
@@ -14,26 +28,28 @@ const Gallery = () => {
     { id: 'events', name: 'Acara Khusus' }
   ];
 
-  const mediaItems = [
+  const mediaItems: MediaItem[] = [
     {
       id: 1,
       type: 'image',
-      url: 'https://images.pexels.com/photos/6646918/pexels-photo-6646918.jpeg?auto=compress&cs=tinysrgb&w=600',
-      title: 'Bakti Sosial Ramadhan 2024',
-      category: 'social',
-      date: '15 Maret 2024',
-      location: 'Desa Brangsong',
-      participants: '100+ Relawan'
+      images: ['/img-event1.jpg'],
+      title: 'Rekreasi Muda Mudi Brangsong',
+      category: 'Anjangsana',
+      date: 'Minggu, 6 Maret 2022',
+      time: '06:00 - 23:00 WIB',
+      location: 'Jogja (Pantai Drini, Malioboro)',
+      participants: '50+'
     },
     {
       id: 2,
-      type: 'video',
-      url: 'https://images.pexels.com/photos/2774556/pexels-photo-2774556.jpeg?auto=compress&cs=tinysrgb&w=600',
-      title: 'Pengajian Malam Jumat',
-      category: 'religious',
-      date: '10 Maret 2024',
-      location: 'Masjid Agung Brangsong',
-      participants: '200+ Jamaah'
+      type: 'image',
+      images: ['/img-event2.jpg', '/img-event2-1.jpg','/img-event2-2.jpg','/img-event2-3.jpg','img-event2-4.jpg'],
+      title: 'Badminton Championship',
+      category: 'sports',
+      date: '19 November 2023',
+      time: '14:00 - 17:00 WIB',
+      location: 'Gor Fandamel Kaliwungu',
+      participants: '30+'
     },
     {
       id: 3,
@@ -141,8 +157,9 @@ const Gallery = () => {
     ? mediaItems 
     : mediaItems.filter(item => item.category === selectedCategory);
 
-  const openModal = (media) => {
+  const openModal = (media: MediaItem) => {
     setSelectedMedia(media);
+    setActiveImageIdx(0);
   };
 
   const closeModal = () => {
@@ -189,7 +206,7 @@ const Gallery = () => {
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {filteredMedia.map((media) => (
+            {filteredMedia.map((media: MediaItem) => (
               <div
                 key={media.id}
                 className="group cursor-pointer overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
@@ -197,7 +214,7 @@ const Gallery = () => {
               >
                 <div className="relative aspect-square overflow-hidden">
                   <img
-                    src={media.url}
+                    src={media.images ? media.images[0] : media.url}
                     alt={media.title}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
@@ -247,12 +264,32 @@ const Gallery = () => {
       {selectedMedia && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
           <div className="bg-white rounded-lg overflow-hidden max-w-4xl w-full max-h-[90vh] overflow-y-auto">
-            <div className="relative">
+            <div className="relative flex items-center justify-center" style={{ minHeight: 300 }}>
+              {/* Tombol Prev */}
+              {selectedMedia.images && selectedMedia.images.length > 1 && (
+                <button
+                  onClick={() => setActiveImageIdx((prev) => (prev === 0 ? selectedMedia.images!.length - 1 : prev - 1))}
+                  className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 text-white rounded-full w-10 h-10 flex items-center justify-center z-10"
+                >
+                  &#8592;
+                </button>
+              )}
+              {/* Gambar */}
               <img
-                src={selectedMedia.url}
+                src={selectedMedia.images ? selectedMedia.images[activeImageIdx] : selectedMedia.url}
                 alt={selectedMedia.title}
                 className="w-full h-auto max-h-[60vh] object-contain"
               />
+              {/* Tombol Next */}
+              {selectedMedia.images && selectedMedia.images.length > 1 && (
+                <button
+                  onClick={() => setActiveImageIdx((prev) => (prev === selectedMedia.images!.length - 1 ? 0 : prev + 1))}
+                  className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 text-white rounded-full w-10 h-10 flex items-center justify-center z-10"
+                >
+                  &#8594;
+                </button>
+              )}
+              {/* Tombol Close */}
               <button
                 onClick={closeModal}
                 className="absolute top-4 right-4 w-10 h-10 bg-black/50 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-colors"
@@ -267,13 +304,16 @@ const Gallery = () => {
                 </div>
               )}
             </div>
-            
             <div className="p-6">
               <h2 className="text-2xl font-bold text-primary-900 mb-4">{selectedMedia.title}</h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-gray-600">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-600">
                 <div className="flex items-center space-x-2">
                   <Calendar className="w-5 h-5 text-primary-600" />
                   <span>{selectedMedia.date}</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <Calendar className="w-5 h-5 text-primary-600" />
+                  <span>{selectedMedia.time}</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <MapPin className="w-5 h-5 text-primary-600" />
