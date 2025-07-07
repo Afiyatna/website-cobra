@@ -53,15 +53,15 @@ const Home = () => {
       title: 'Rekreasi Muda Mudi Brangsong',
       date: 'Minggu, 6 Maret 2022',
       time: '06:00 - 23:00 WIB',
-      location: 'Jogja (Pantai Drini, Malioboro',
+      location: 'Jogja (Pantai Drini, Malioboro)',
       image: '/img-event1.jpg'
     },
     {
-      title: 'Bakti Sosial Ramadhan',
-      date: '20 April 2024',
-      time: '08:00 WIB',
-      location: 'Desa Brangsong',
-      image: 'https://images.pexels.com/photos/6646918/pexels-photo-6646918.jpeg?auto=compress&cs=tinysrgb&w=400'
+      title: 'Badminton Championship',
+      date: '19 November 2023',
+      time: '14:00 - 17:00 WIB',
+      location: 'Gor Fandamel Kaliwungu',
+      image: '/img-event2.jpg'
     }
   ];
 
