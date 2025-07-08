@@ -156,16 +156,16 @@ const Programs = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Program & Kegiatan</h1>
-            <p className="text-xl text-primary-100 max-w-3xl mx-auto">
+            {/* <p className="text-xl text-primary-100 max-w-3xl mx-auto">
               Berbagai program yang dirancang untuk memberdayakan masyarakat dan 
               membangun generasi muda yang berkarakter
-            </p>
+            </p> */}
           </div>
         </div>
       </section>
 
       {/* Program Categories */}
-      <section className="py-16 bg-white">
+      {/* <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-primary-900 mb-4">Kategori Program</h2>
@@ -215,10 +215,10 @@ const Programs = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Upcoming Events */}
-      <section className="py-16 bg-gray-50">
+      {/* <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-primary-900 mb-4">Kegiatan Mendatang</h2>
@@ -270,10 +270,10 @@ const Programs = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Achievements */}
-      <section className="py-16 bg-white">
+      {/* <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-primary-900 mb-4">Pencapaian Kami</h2>
@@ -295,10 +295,10 @@ const Programs = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Call to Action */}
-      <section className="py-16 bg-gradient-to-r from-primary-800 to-primary-900">
+      {/* <section className="py-16 bg-gradient-to-r from-primary-800 to-primary-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="flex items-center justify-center mb-6">
             <Zap className="w-12 h-12 text-secondary-400" />
@@ -318,7 +318,7 @@ const Programs = () => {
             </button>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };
