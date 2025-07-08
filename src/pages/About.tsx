@@ -108,10 +108,10 @@ const About = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Tentang Kami</h1>
-            <p className="text-xl text-primary-100 max-w-3xl mx-auto">
+            {/* <p className="text-xl text-primary-100 max-w-3xl mx-auto">
               Mengenal lebih dekat Muda Mudi Brangsong, organisasi kepemudaan yang 
               berkomitmen membangun generasi muda yang aktif, kreatif, dan peduli masyarakat
-            </p>
+            </p> */}
           </div>
         </div>
       </section>
@@ -122,7 +122,7 @@ const About = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="animate-slide-up">
               <h2 className="text-3xl font-bold text-primary-900 mb-6">Sejarah Singkat</h2>
-              <p className="text-gray-700 leading-relaxed mb-6">
+              {/* <p className="text-gray-700 leading-relaxed mb-6">
                 Muda Mudi Brangsong didirikan pada tahun 2016 oleh sekelompok pemuda yang memiliki 
                 visi untuk menciptakan perubahan positif di masyarakat. Berawal dari keprihatinan 
                 terhadap kurangnya wadah bagi generasi muda untuk berkontribusi, organisasi ini 
@@ -140,15 +140,15 @@ const About = () => {
               <div className="flex items-center space-x-4 text-primary-600 mt-2">
                 <MapPin className="w-5 h-5" />
                 <span className="font-semibold">Lokasi: Desa Brangsong, Kendal</span>
-              </div>
+              </div> */}
             </div>
-            <div className="animate-slide-up">
+            {/* <div className="animate-slide-up">
               <img
                 src="https://images.pexels.com/photos/3184430/pexels-photo-3184430.jpeg?auto=compress&cs=tinysrgb&w=600"
                 alt="Sejarah Organisasi"
                 className="rounded-lg shadow-lg w-full"
               />
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
@@ -164,11 +164,11 @@ const About = () => {
                 </div>
                 <h2 className="text-2xl font-bold text-primary-900">Visi</h2>
               </div>
-              <p className="text-gray-700 leading-relaxed">
+              {/* <p className="text-gray-700 leading-relaxed">
                 Menjadi organisasi kepemudaan terdepan yang menghasilkan generasi muda 
                 berkarakter, berprestasi, dan berkontribusi nyata dalam pembangunan 
                 masyarakat yang bermartabat dan sejahtera.
-              </p>
+              </p> */}
             </div>
 
             <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
@@ -179,7 +179,7 @@ const About = () => {
                 <h2 className="text-2xl font-bold text-primary-900">Misi</h2>
               </div>
               <ul className="text-gray-700 space-y-3">
-                <li className="flex items-start space-x-2">
+                {/* <li className="flex items-start space-x-2">
                   <div className="w-2 h-2 bg-secondary-500 rounded-full mt-2 flex-shrink-0"></div>
                   <span>Mengembangkan potensi generasi muda melalui program pendidikan dan pelatihan</span>
                 </li>
@@ -194,7 +194,7 @@ const About = () => {
                 <li className="flex items-start space-x-2">
                   <div className="w-2 h-2 bg-secondary-500 rounded-full mt-2 flex-shrink-0"></div>
                   <span>Melestarikan nilai-nilai budaya dan agama dalam kehidupan sehari-hari</span>
-                </li>
+                </li> */}
               </ul>
             </div>
           </div>
@@ -202,7 +202,7 @@ const About = () => {
       </section>
 
       {/* Values Section */}
-      <section className="py-16 bg-white">
+      {/* <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-primary-900 mb-4">Nilai-Nilai Organisasi</h2>
@@ -223,10 +223,10 @@ const About = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Timeline */}
-      <section className="py-16 bg-gray-50">
+      {/* <section className="py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-primary-900 mb-4">Perjalanan Kami</h2>
@@ -255,10 +255,10 @@ const About = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Board Members */}
-      <section className="py-16 bg-white">
+      {/* <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-primary-900 mb-4">Struktur Pengurus</h2>
@@ -287,7 +287,7 @@ const About = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };
