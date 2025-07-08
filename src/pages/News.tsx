@@ -267,7 +267,7 @@ const News = () => {
       </section>
 
       {/* Articles Grid */}
-      <section className="py-16 bg-gray-50">
+      {/* <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {filteredArticles.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -333,10 +333,10 @@ const News = () => {
             </div>
           )}
         </div>
-      </section>
+      </section> */}
 
       {/* Article Modal */}
-      {selectedArticle && (
+      {/* {selectedArticle && (
         <div className="fixed inset-0 z-50 overflow-y-auto bg-black/50 backdrop-blur-sm">
           <div className="min-h-screen flex items-center justify-center p-4">
             <div className="bg-white rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
@@ -391,10 +391,10 @@ const News = () => {
             </div>
           </div>
         </div>
-      )}
+      )} */}
 
       {/* Newsletter Subscription */}
-      <section className="py-16 bg-primary-800">
+      {/* <section className="py-16 bg-primary-800">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
             Jangan Lewatkan Berita Terbaru
@@ -413,7 +413,7 @@ const News = () => {
             </button>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };
