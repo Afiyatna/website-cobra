@@ -101,12 +101,12 @@ const Home = () => {
                 <span>Kenali Kami</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
-              <Link
+              {/* <Link
                 to="/contact"
                 className="bg-gradient-to-r from-secondary-500 to-secondary-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-secondary-600 hover:to-secondary-700 transition-all duration-300"
               >
                 Hubungi Kami
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>
@@ -223,7 +223,7 @@ const Home = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="py-16 bg-gradient-to-r from-primary-800 to-primary-900">
+      {/* <section className="py-16 bg-gradient-to-r from-primary-800 to-primary-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
             Mari Berpartisipasi Bersama Kami
@@ -246,7 +246,7 @@ const Home = () => {
             </Link>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };
