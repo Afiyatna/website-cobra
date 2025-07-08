@@ -80,17 +80,17 @@ const Footer = () => {
               <li className="flex items-start space-x-2">
                 <MapPin className="w-4 h-4 mt-1 flex-shrink-0" />
                 <span className="text-gray-300 text-sm">
-                  Jl. Raya Brangsong No. 123<br />
+                  Jl. Letnan Suyono No.1<br />
                   Brangsong, Kendal, Jawa Tengah
                 </span>
               </li>
               <li className="flex items-center space-x-2">
                 <Phone className="w-4 h-4 flex-shrink-0" />
-                <span className="text-gray-300 text-sm">+62 812-3456-7890</span>
+                <span className="text-gray-300 text-sm"></span>
               </li>
               <li className="flex items-center space-x-2">
                 <Mail className="w-4 h-4 flex-shrink-0" />
-                <span className="text-gray-300 text-sm">info@mudamudibrangsong.org</span>
+                <span className="text-gray-300 text-sm">cobra.family354@gmail.com</span>
               </li>
             </ul>
           </div>
@@ -98,7 +98,7 @@ const Footer = () => {
 
         <div className="border-t border-primary-800 mt-8 pt-8 text-center">
           <p className="text-gray-300 text-sm">
-            © 2024 Muda Mudi Brangsong. Semua hak cipta dilindungi.
+            © 2025 Muda Mudi Brangsong. Semua hak cipta dilindungi.
           </p>
         </div>
       </div>
