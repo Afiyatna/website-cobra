@@ -330,7 +330,7 @@ const Gallery = () => {
       )}
 
       {/* Statistics */}
-      <section className="py-16 bg-white">
+      {/* <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-primary-900 mb-4">Dokumentasi dalam Angka</h2>
@@ -355,7 +355,7 @@ const Gallery = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };
