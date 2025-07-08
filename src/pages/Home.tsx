@@ -58,7 +58,7 @@ const Home = () => {
     },
     {
       title: 'Badminton Championship',
-      date: '19 November 2023',
+      date: '12 & 19 November 2023',
       time: '14:00 - 17:00 WIB',
       location: 'Gor Fandamel Kaliwungu',
       image: 'Gallery/img-event2.jpg'
