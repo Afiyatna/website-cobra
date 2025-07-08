@@ -21,20 +21,21 @@ const Gallery = () => {
 
   const categories = [
     { id: 'all', name: 'Semua' },
-    { id: 'social', name: 'Kegiatan Sosial' },
-    { id: 'religious', name: 'Kegiatan Keagamaan' },
-    { id: 'education', name: 'Pendidikan' },
+    // { id: 'social', name: 'Kegiatan Sosial' },
+    // { id: 'religious', name: 'Kegiatan Keagamaan' },
+    // { id: 'education', name: 'Pendidikan' },
     { id: 'sports', name: 'Olahraga' },
-    { id: 'events', name: 'Acara Khusus' }
+    { id: 'events', name: 'Keakraban' },
+    { id: 'rekreasi', name: 'Rekreasi' }
   ];
 
   const mediaItems: MediaItem[] = [
     {
       id: 1,
       type: 'image',
-      images: ['Gallery/img-event1.jpg'],
+      images: ['Gallery/img-event1.jpg','Gallery/img-event1-2.jpg','Gallery/img-event1-3.jpg','Gallery/img-event1-4.jpg','Gallery/img-event1-5.jpg','Gallery/img-event1-6.jpg','Gallery/img-event1-7.jpg','Gallery/img-event1-8.jpg','Gallery/img-event1-9.jpg','Gallery/img-event1-10.jpg','Gallery/img-event1-11.jpg','Gallery/img-event1-12.jpg','Gallery/img-event1-13.jpg','Gallery/img-event1-14.jpg','Gallery/img-event1-15.jpg','Gallery/img-event1-16.jpg','Gallery/img-event1-17.jpg','Gallery/img-event1-18.jpg'],
       title: 'Rekreasi Muda Mudi Brangsong',
-      category: 'Anjangsana',
+      category: 'rekreasi',
       date: 'Minggu, 6 Maret 2022',
       time: '06:00 - 23:00 WIB',
       location: 'Jogja (Pantai Drini, Malioboro)',
@@ -43,114 +44,114 @@ const Gallery = () => {
     {
       id: 2,
       type: 'image',
-      images: ['Gallery/img-event2.jpg', 'Gallery/img-event2-1.jpg','Gallery/img-event2-2.jpg','Gallery/img-event2-3.jpg','Gallery/img-event2-4.jpg'],
+      images: ['Gallery/img-event2.jpg','Gallery/img-event2-1.jpg','Gallery/img-event2-2.jpg','Gallery/img-event2-3.jpg','Gallery/img-event2-4.jpg','Gallery/img-event2-5.jpg','Gallery/img-event2-6.jpg','Gallery/img-event2-7.jpg','Gallery/img-event2-8.jpg','Gallery/img-event2-9.jpg','Gallery/img-event2-10.jpg','Gallery/img-event2-11.jpg','Gallery/img-event2-12.jpg','Gallery/img-event2-13.jpg','Gallery/img-event2-14.jpg','Gallery/img-event2-15.jpg','Gallery/img-event2-16.jpg','Gallery/img-event2-17.jpg','Gallery/img-event2-18.jpg','Gallery/img-event2-19.jpg'],
       title: 'Badminton Championship',
       category: 'sports',
-      date: '19 November 2023',
+      date: '12 & 19 November 2023',
       time: '14:00 - 17:00 WIB',
       location: 'Gor Fandamel Kaliwungu',
       participants: '30+'
     },
-    {
-      id: 3,
-      type: 'image',
-      url: 'https://images.pexels.com/photos/8471928/pexels-photo-8471928.jpeg?auto=compress&cs=tinysrgb&w=600',
-      title: 'Bimbingan Belajar Gratis',
-      category: 'education',
-      date: '8 Maret 2024',
-      location: 'Balai Desa',
-      participants: '50+ Siswa'
-    },
-    {
-      id: 4,
-      type: 'image',
-      url: 'https://images.pexels.com/photos/274422/pexels-photo-274422.jpeg?auto=compress&cs=tinysrgb&w=600',
-      title: 'Turnamen Futsal Antar RT',
-      category: 'sports',
-      date: '5 Maret 2024',
-      location: 'Lapangan Desa',
-      participants: '16 Tim'
-    },
-    {
-      id: 5,
-      type: 'video',
-      url: 'https://images.pexels.com/photos/3184325/pexels-photo-3184325.jpeg?auto=compress&cs=tinysrgb&w=600',
-      title: 'Pelatihan Kewirausahaan',
-      category: 'education',
-      date: '1 Maret 2024',
-      location: 'Aula Desa',
-      participants: '75+ Peserta'
-    },
-    {
-      id: 6,
-      type: 'image',
-      url: 'https://images.pexels.com/photos/3397989/pexels-photo-3397989.jpeg?auto=compress&cs=tinysrgb&w=600',
-      title: 'Tadarus Al-Quran',
-      category: 'religious',
-      date: '25 Februari 2024',
-      location: 'Masjid Al-Ikhlas',
-      participants: '150+ Jamaah'
-    },
-    {
-      id: 7,
-      type: 'image',
-      url: 'https://images.pexels.com/photos/2422290/pexels-photo-2422290.jpeg?auto=compress&cs=tinysrgb&w=600',
-      title: 'Gotong Royong Bersih Desa',
-      category: 'social',
-      date: '20 Februari 2024',
-      location: 'Seluruh Desa Brangsong',
-      participants: '300+ Warga'
-    },
-    {
-      id: 8,
-      type: 'video',
-      url: 'https://images.pexels.com/photos/3823063/pexels-photo-3823063.jpeg?auto=compress&cs=tinysrgb&w=600',
-      title: 'Senam Sehat Bersama',
-      category: 'sports',
-      date: '18 Februari 2024',
-      location: 'Alun-alun Desa',
-      participants: '200+ Peserta'
-    },
-    {
-      id: 9,
-      type: 'image',
-      url: 'https://images.pexels.com/photos/3184430/pexels-photo-3184430.jpeg?auto=compress&cs=tinysrgb&w=600',
-      title: 'Peringatan HUT RI ke-78',
-      category: 'events',
-      date: '17 Agustus 2023',
-      location: 'Lapangan Desa',
-      participants: '500+ Warga'
-    },
-    {
-      id: 10,
-      type: 'video',
-      url: 'https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg?auto=compress&cs=tinysrgb&w=600',
-      title: 'Festival Budaya Lokal',
-      category: 'events',
-      date: '10 Desember 2023',
-      location: 'Pendopo Desa',
-      participants: '400+ Pengunjung'
-    },
-    {
-      id: 11,
-      type: 'image',
-      url: 'https://images.pexels.com/photos/2325304/pexels-photo-2325304.jpeg?auto=compress&cs=tinysrgb&w=600',
-      title: 'Santunan Anak Yatim',
-      category: 'social',
-      date: '15 Desember 2023',
-      location: 'Balai Desa',
-      participants: '50+ Anak Yatim'
-    },
-    {
-      id: 12,
-      type: 'image',
-      url: 'https://images.pexels.com/photos/3768114/pexels-photo-3768114.jpeg?auto=compress&cs=tinysrgb&w=600',
-      title: 'Pelatihan Digital Marketing',
-      category: 'education',
-      date: '5 Januari 2024',
-      location: 'Lab Komputer Desa',
-      participants: '30+ Peserta'
-    }
+    // {
+    //   id: 3,
+    //   type: 'image',
+    //   url: 'https://images.pexels.com/photos/8471928/pexels-photo-8471928.jpeg?auto=compress&cs=tinysrgb&w=600',
+    //   title: 'Bimbingan Belajar Gratis',
+    //   category: 'education',
+    //   date: '8 Maret 2024',
+    //   location: 'Balai Desa',
+    //   participants: '50+ Siswa'
+    // },
+    // {
+    //   id: 4,
+    //   type: 'image',
+    //   url: 'https://images.pexels.com/photos/274422/pexels-photo-274422.jpeg?auto=compress&cs=tinysrgb&w=600',
+    //   title: 'Turnamen Futsal Antar RT',
+    //   category: 'sports',
+    //   date: '5 Maret 2024',
+    //   location: 'Lapangan Desa',
+    //   participants: '16 Tim'
+    // },
+    // {
+    //   id: 5,
+    //   type: 'video',
+    //   url: 'https://images.pexels.com/photos/3184325/pexels-photo-3184325.jpeg?auto=compress&cs=tinysrgb&w=600',
+    //   title: 'Pelatihan Kewirausahaan',
+    //   category: 'education',
+    //   date: '1 Maret 2024',
+    //   location: 'Aula Desa',
+    //   participants: '75+ Peserta'
+    // },
+    // {
+    //   id: 6,
+    //   type: 'image',
+    //   url: 'https://images.pexels.com/photos/3397989/pexels-photo-3397989.jpeg?auto=compress&cs=tinysrgb&w=600',
+    //   title: 'Tadarus Al-Quran',
+    //   category: 'religious',
+    //   date: '25 Februari 2024',
+    //   location: 'Masjid Al-Ikhlas',
+    //   participants: '150+ Jamaah'
+    // },
+    // {
+    //   id: 7,
+    //   type: 'image',
+    //   url: 'https://images.pexels.com/photos/2422290/pexels-photo-2422290.jpeg?auto=compress&cs=tinysrgb&w=600',
+    //   title: 'Gotong Royong Bersih Desa',
+    //   category: 'social',
+    //   date: '20 Februari 2024',
+    //   location: 'Seluruh Desa Brangsong',
+    //   participants: '300+ Warga'
+    // },
+    // {
+    //   id: 8,
+    //   type: 'video',
+    //   url: 'https://images.pexels.com/photos/3823063/pexels-photo-3823063.jpeg?auto=compress&cs=tinysrgb&w=600',
+    //   title: 'Senam Sehat Bersama',
+    //   category: 'sports',
+    //   date: '18 Februari 2024',
+    //   location: 'Alun-alun Desa',
+    //   participants: '200+ Peserta'
+    // },
+    // {
+    //   id: 9,
+    //   type: 'image',
+    //   url: 'https://images.pexels.com/photos/3184430/pexels-photo-3184430.jpeg?auto=compress&cs=tinysrgb&w=600',
+    //   title: 'Peringatan HUT RI ke-78',
+    //   category: 'events',
+    //   date: '17 Agustus 2023',
+    //   location: 'Lapangan Desa',
+    //   participants: '500+ Warga'
+    // },
+    // {
+    //   id: 10,
+    //   type: 'video',
+    //   url: 'https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg?auto=compress&cs=tinysrgb&w=600',
+    //   title: 'Festival Budaya Lokal',
+    //   category: 'events',
+    //   date: '10 Desember 2023',
+    //   location: 'Pendopo Desa',
+    //   participants: '400+ Pengunjung'
+    // },
+    // {
+    //   id: 11,
+    //   type: 'image',
+    //   url: 'https://images.pexels.com/photos/2325304/pexels-photo-2325304.jpeg?auto=compress&cs=tinysrgb&w=600',
+    //   title: 'Santunan Anak Yatim',
+    //   category: 'social',
+    //   date: '15 Desember 2023',
+    //   location: 'Balai Desa',
+    //   participants: '50+ Anak Yatim'
+    // },
+    // {
+    //   id: 12,
+    //   type: 'image',
+    //   url: 'https://images.pexels.com/photos/3768114/pexels-photo-3768114.jpeg?auto=compress&cs=tinysrgb&w=600',
+    //   title: 'Pelatihan Digital Marketing',
+    //   category: 'education',
+    //   date: '5 Januari 2024',
+    //   location: 'Lab Komputer Desa',
+    //   participants: '30+ Peserta'
+    // }
   ];
 
   const filteredMedia = selectedCategory === 'all' 
