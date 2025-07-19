@@ -10,7 +10,28 @@ import {
   MapPin,
   Play
 } from 'lucide-react';
-import imgHome from '../assets/img-home.jpg';
+import slide1 from '../assets/slide1.jpg';
+import slide2 from '../assets/slide2.jpg';
+import slide3 from '../assets/slide3.jpg';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/pagination';
+
+const heroSlides = [
+  {
+    image: slide1,
+    title: 'Kegiatan Kebersamaan Muda Mudi',
+  },
+  {
+    image: slide2,
+    title: 'Bakti Sosial di Desa Brangsong',
+  },
+  {
+    image: slide3,
+    title: 'Pengajian Rutin Remaja',
+  },
+];
 
 const Home = () => {
   const [timeLeft, setTimeLeft] = useState({
@@ -67,74 +88,60 @@ const Home = () => {
 
   return (
     <div className="animate-fade-in">
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-        <div className="absolute inset-0 bg-gradient-to-r from-primary-900 via-primary-800 to-primary-700">
-          <div className="absolute inset-0 bg-black/30"></div>
-          <img
-            src={imgHome}
-            alt="Home Visual"
-            className="w-full h-[40vh] sm:h-[60vh] md:h-[80vh] object-cover object-center rounded-b-3xl shadow-lg transition-all duration-500 mt-20"
-            style={{ aspectRatio: '16/9' }}
-          />
-        </div>
-        
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="animate-slide-up">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Muda Mudi Brangsong
-            </h1>
-            <p className="text-xl md:text-2xl text-secondary-300 font-medium mb-8">
-              Aktif, Kreatif, Peduli Masyarakat
-            </p>
-            <p className="text-lg text-white/90 max-w-2xl mx-auto mb-12 leading-relaxed">
-              Organisasi kepemudaan yang berkomitmen membangun generasi muda yang 
-              berprestasi, berkarakter, dan berkontribusi positif bagi masyarakat 
-              melalui program-program sosial, keagamaan, dan pengembangan diri.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/about"
-                className="bg-white text-primary-900 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 group"
-              >
-                <span>Kenali Kami</span>
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              {/* <Link
-                to="/contact"
-                className="bg-gradient-to-r from-secondary-500 to-secondary-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-secondary-600 hover:to-secondary-700 transition-all duration-300"
-              >
-                Hubungi Kami
-              </Link> */}
-            </div>
-          </div>
-        </div>
-
-        {/* Scroll indicator */}
-        {/* <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-white/50 rounded-full mt-2 animate-pulse"></div>
-          </div>
-        </div> */}
+      {/* Hero Section with SwiperJS Slider */}
+      <section className="relative w-full pt-16 pb-4">
+        <Swiper
+          modules={[Autoplay, Pagination]}
+          slidesPerView={1}
+          loop={true}
+          autoplay={{ delay: 3500, disableOnInteraction: false }}
+          pagination={{ clickable: true }}
+          className="w-full"
+        >
+          {heroSlides.map((slide, idx) => (
+            <SwiperSlide key={idx}>
+              <div className="relative flex justify-center items-center">
+                <div className="rounded-2xl border-4 border-white shadow-2xl overflow-hidden bg-white w-full max-w-screen-xl mx-auto">
+                  <img
+                    src={slide.image}
+                    alt={slide.title}
+                    className="w-full h-[200px] sm:h-[300px] md:h-[80vh] object-cover object-center"
+                    style={{ aspectRatio: '16/9' }}
+                  />
+                </div>
+                {/* Judul/Caption di atas gambar */}
+                <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 bg-black/60 px-4 py-2 text-white text-xl md:text-3xl font-bold font-poppins leading-snug">
+                  {slide.title}
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </section>
 
-      {/* Stats Section */}
-      {/* <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center group hover:scale-105 transition-transform duration-300">
-                <div className="w-16 h-16 bg-gradient-to-r from-primary-600 to-secondary-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg">
-                  <stat.icon className="w-8 h-8 text-white" />
-                </div>
-                <div className="text-3xl font-bold text-primary-900 mb-1">{stat.value}</div>
-                <div className="text-gray-600">{stat.label}</div>
-              </div>
-            ))}
-          </div>
+      {/* Tulisan utama dipindah ke bawah slider */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mt-12">
+        <h1 className="text-4xl md:text-6xl font-bold text-primary-900 mb-6">
+          Muda Mudi Brangsong
+        </h1>
+        <p className="text-xl md:text-2xl text-primary-700 font-medium mb-8">
+          Aktif, Kreatif, Peduli Masyarakat
+        </p>
+        <p className="text-lg text-gray-700 max-w-2xl mx-auto mb-12 leading-relaxed">
+          Organisasi kepemudaan yang berkomitmen membangun generasi muda yang 
+          berprestasi, berkarakter, dan berkontribusi positif bagi masyarakat 
+          melalui program-program sosial, keagamaan, dan pengembangan diri.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <Link
+            to="/about"
+            className="bg-white text-primary-900 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 group"
+          >
+            <span>Kenali Kami</span>
+            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+          </Link>
         </div>
-      </section> */}
+      </div>
 
       {/* Countdown Section */}
       <section className="py-16 bg-gradient-to-r from-primary-50 to-secondary-50">

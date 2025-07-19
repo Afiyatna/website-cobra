@@ -32,7 +32,7 @@ export default {
         }
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+        sans: ['Inter', 'system-ui', 'sans-serif','Montserrat', 'ui-sans-serif', 'system-ui'],
       },
       animation: {
         'fade-in': 'fadeIn 0.6s ease-out',
